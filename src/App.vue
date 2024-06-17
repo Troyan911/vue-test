@@ -60,11 +60,8 @@ export default {
       }
       this.error = ''
 
-      let fromCoin = this.coinFrom;
-      let toCoin = this.coinTo;
-
       await convert.ready();
-      this.result = convert[fromCoin][toCoin](this.amount);
+      this.result = convert[this.coinFrom][this.coinTo](this.amount);
     }
   }
 }
